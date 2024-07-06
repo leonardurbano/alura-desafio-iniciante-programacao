@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../asset/bgH4tz.gif);
+    width: 100%;
+    height: 100%;
+}
+
+.cabecalho{
+    width: 30%;
+    padding: 2% 2% 2% 2%;
+    position: absolute;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 3%;
+
+}
+
+.apresentacao__caixaCodificadora__caixaTexto{
+    margin-top: 20%;
+    padding: 5%;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: "Inter", sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    color: #FFFFFF;
+    width: 86%;
+    outline: 0;
+    border: dashed #2b8004 10px;
+}
+
+.apresentacao__caixaCodificadora__texto__info{
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    padding-top: 2%;
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: #FFFFFF;
+    padding-bottom: 3%;
+}
+
+.apresentacao__caixaCodificadora__botoes{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.apresentacao__caixaCodificadora__botoes_style{
+    padding: 4%;
+    text-align: center;
+    width: 50%;
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+    background-color: #0f5a05;
+    font-size: 1rem;
+    border-radius: 0px;
+    text-decoration: none;
+}
+
+
+.apresentacao__caixaCodificadora__botoes_style:hover{
+    background-color: #51703c;
+}
+
+/*---------------------------------------------------------*/
+
+
+.apresentacao__caixaDecodificadora{
+    border: dashed #2b8004 10px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1%;
+    margin-top: 3%;
+}
+
+.apresentacao__caixaDecodificadora__img{
+    width: auto;
+    height: auto;
+    padding: 22% 0% 22% 0%;
+}
+
+.apresentacao__caixaDecodificadora__texto__label{
+    font-family: "Inter", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.apresentacao__caixaDecodificadora_caixaTexto{
+    padding-top: 5%;
+    width: 90%;
+    background-color: transparent;
+    border-color: transparent;
+    outline: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+.rodape{
+    margin-top: 1.5%;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1.5%;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;    
+}
