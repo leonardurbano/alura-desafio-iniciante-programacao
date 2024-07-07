@@ -58,8 +58,13 @@ function copyTexto() {
     var textArea = document.getElementsByClassName('apresentacao__caixaDecodificadora__caixaTexto')[0];
     textArea.select();
 
-    btn.addEventListener('onclick', function(e){
-        document.execCommand(textArea.value);
+    navigator.clipboard.writeText(textArea.value).then(() => {
+        alert('Copia realizada com sucesso');
     });
+
+
+    // btn.addEventListener('onclick', function(e){
+    //     document.execCommand(textArea.value);
+    // });
 
 }
