@@ -8,10 +8,13 @@ function limpaValor(){
 function criptografaTexto(){
 
     let campoUm = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    let criptografada = campoUm.value.replace('a', 'ai').replace('e','enter').replace('i','imes').replace('o', 'ober').replace('u', 'ufat');
+    let criptografada = campoUm.value;
     
+    let fraseGeral = criptografada.replace('e', 'enter').replace('i','imes').replace('a','ai').replace('o', 'ober').replace('u', 'ufat');
+
+
     let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
-    frase.value = criptografada;
+    frase.value = fraseGeral;
 
     esconderImagem('Mensagem<br>Criptografada');
     isBotaoCopy();
@@ -20,7 +23,7 @@ function criptografaTexto(){
 
 function descriptografaTexto(){
     let campo = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    let descriptografada = campo.value.replace('ai', 'a').replace('enter','e').replace('imes','i').replace('ober','o').replace('ufat','u');
+    let descriptografada = campo.value.replace('enter','e').replace('imes', 'i').replace('ai', 'a').replace('ober', 'o').replace('ufat', 'u');
     
     let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
     frase.value = descriptografada;
