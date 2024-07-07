@@ -1,5 +1,3 @@
-
-
 function limpaValor(){
 
     let campo = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
@@ -48,14 +46,14 @@ function esconderImagem(mensagem){
 }
 
 function isBotaoCopy(){
+ 
     let botaoCopy = document.getElementsByClassName('apresentacao__caixaDecodificadora__botao__copy')[0];
     botaoCopy.removeAttribute('hidden');
+
 }
 
-
 function copyTexto() {
-    // let label = document.getElementsByClassName('apresentacao__caixaDecodificadora__caixaTexto');
-
+    
     let btn = document.getElementById('copy__texto');
     var textArea = document.getElementsByClassName('apresentacao__caixaDecodificadora__caixaTexto')[0];
     textArea.select();
@@ -64,12 +62,4 @@ function copyTexto() {
         document.execCommand(textArea.value);
     });
 
-
-    console.log('------');
-    console.log( textArea.value);
-    console.log('------');
-
-    // label.Select();
-    // document.execCommand(label.addEventListener('copyTexto', document.getElementsByClassName('apresentacao__caixaDecodificadora__caixaTexto')));
-    // let mens = label.value;
 }
