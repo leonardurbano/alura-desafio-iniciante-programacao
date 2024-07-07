@@ -9,33 +9,37 @@
 </head>
 
 <body>
+
     <header class="cabecalho">
         <section class="cabecalho__logo">
             <img src="./asset/logo-a.png" alt="">
         </section>
     </header>
+
     <main class="apresentacao">
+    
         <section class="apresentacao__caixaCodificadora">
-            <textarea class="apresentacao__caixaCodificadora__caixaTexto" name="" rows="15"
-                cols="">Digite seu texto</textarea>
-            <p class="apresentacao__caixaCodificadora__texto__info"><img src="./asset/icon-alert.png" alt=""> Apenas
-                letras minúsculas e sem acento.</p>
+            <textarea onclick="limpaValor()" class="apresentacao__caixaCodificadora__caixaTexto" name="" rows="15" cols="">Digite seu texto</textarea>
+            <p class="apresentacao__caixaCodificadora__texto__info"><img src="./asset/icon-alert.png" alt=""> Apenas letras minúsculas e sem acento.</p>
             <div class="apresentacao__caixaCodificadora__botoes">
-                <a class="apresentacao__caixaCodificadora__botoes_style" href="#">Criptografar</a>
-                <a class="apresentacao__caixaCodificadora__botoes_style" href="#">Descriptografar</a>
+                <input onclick="criptografaTexto()" class="apresentacao__caixaCodificadora__botoes_style" type="button" value="Criptografar">
+                <input onclick="descriptografaTexto()" class="apresentacao__caixaCodificadora__botoes_style" type="button" value="Descriptografar">
             </div>
         </section>
+
         <section class="apresentacao__caixaDecodificadora">
-            <img class="apresentacao__caixaDecodificadora__img" src="./asset/computer-1294045.svg" alt="">
+            <img class="apresentacao__caixaDecodificadora__img" src="./asset/computer-1294045-2.svg" alt="">
             <p class="apresentacao__caixaDecodificadora__texto__label">Nenhuma mensagem encontrada</p>
-            <textarea class="apresentacao__caixaDecodificadora_caixaTexto" name="" rows="5"
-                cols="">Digite um texto que você deseja criptografar ou descriptografar.</textarea><br />
-            <a href=""></a>
-            <input hidden="hidden" type="button" value="Copiar">
+            <textarea class="apresentacao__caixaDecodificadora__caixaTexto" name="" rows="5"
+                cols="">Digite um texto que você deseja criptografar ou descriptografar</textarea>
+           
+            <input onclick="copyTexto()" id="copy__texto" class="apresentacao__caixaDecodificadora__botao__copy apresentacao__caixaCodificadora__botoes_style" hidden="hidden" type="button" value="Copiar">
         </section>
     </main>
+
     <footer class="rodape">2024 - Desenvolvido por leonardurbano - Treinamento Alura Latam</footer>
-    <script src="./js/javascript.js"></script>
+    
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>

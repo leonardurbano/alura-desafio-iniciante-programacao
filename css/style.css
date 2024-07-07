@@ -12,8 +12,8 @@ body{
 }
 
 .cabecalho{
-    width: 30%;
-    padding: 2% 2% 2% 2%;
+    width: 10%;
+    padding: 2%;
     position: absolute;
 }
 
@@ -22,11 +22,15 @@ body{
     align-items: center;
     justify-content:center;
     gap: 3%;
+    width: 100%;
+    height: auto;
 
 }
 
 .apresentacao__caixaCodificadora__caixaTexto{
     margin-top: 20%;
+    width: 80%;
+    height: 100%;
     padding: 5%;
     background-color: transparent;
     border-color: transparent;
@@ -34,7 +38,6 @@ body{
     font-size: 2rem;
     font-weight: 200;
     color: #FFFFFF;
-    width: 86%;
     outline: 0;
     border: dashed #2b8004 10px;
 }
@@ -79,31 +82,35 @@ body{
 
 
 .apresentacao__caixaDecodificadora{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
     border: dashed #2b8004 10px;
     color: #FFFFFF;
     text-align: center;
-    padding: 1%;
-    margin-top: 3%;
+    padding: 5% 1% 5% 1%;
 }
 
 .apresentacao__caixaDecodificadora__img{
-    width: auto;
-    height: auto;
-    padding: 22% 0% 22% 0%;
+    box-sizing: content-box;
+    width: 100%;
+
 }
 
 .apresentacao__caixaDecodificadora__texto__label{
     font-family: "Inter", sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
+    padding-top: 10%;
 }
 
-.apresentacao__caixaDecodificadora_caixaTexto{
-    padding-top: 5%;
-    width: 90%;
+.apresentacao__caixaDecodificadora__caixaTexto{
+    padding-top: 15%;
     background-color: transparent;
     border-color: transparent;
     outline: 0;
+    overflow: hidden;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     font-weight: 400;
@@ -111,6 +118,13 @@ body{
     text-align: center;
 }
 
+.apresentacao__caixaDecodificadora__botao__copy{
+    width: 100%;
+    height: auto;
+    margin-top: 80%;
+    margin-bottom: -30%;
+    
+}
 
 .rodape{
     margin-top: 1.5%;
