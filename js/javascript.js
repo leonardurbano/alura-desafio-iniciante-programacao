@@ -8,13 +8,18 @@ function limpaValor(){
 function criptografaTexto(){
 
     let campoUm = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    let criptografada = campoUm.value;
     
-    let fraseGeral = criptografada.replace('e', 'enter').replace('i','imes').replace('a','ai').replace('o', 'ober').replace('u', 'ufat');
+    let arrayFrase = campoUm.value.split(' ');
+    let criptografada = '';
 
+    for (let index = 0; index < arrayFrase.length; index++) {
+        criptografada += arrayFrase[index].replace('e', 'enter').replace('i','imes').replace('a','ai').replace('o', 'ober').replace('u', 'ufat') + ' ';
+    }
+    //teste no console
+    console.log(criptografada.trim());
 
     let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
-    frase.value = fraseGeral;
+    frase.value = criptografada.trim();
 
     esconderImagem('Mensagem<br>Criptografada');
     isBotaoCopy();
@@ -22,11 +27,19 @@ function criptografaTexto(){
 }
 
 function descriptografaTexto(){
-    let campo = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    let descriptografada = campo.value.replace('enter','e').replace('imes', 'i').replace('ai', 'a').replace('ober', 'o').replace('ufat', 'u');
-    
+
+    let campoDois = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
+    let arrayFrase = campoDois.value.split(' ');
+    let descriptografada = '';
+
+    for (let index = 0; index < arrayFrase.length; index++) {
+        descriptografada += arrayFrase[index].replace('enter', 'e').replace('imes', 'i').replace('ai', 'a').replace('ober', 'o').replace('ufat', 'u') + ' ';
+    }
+    //teste no console
+    console.log(descriptografada.trim());
+
     let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
-    frase.value = descriptografada;
+    frase.value = descriptografada.trim();
 
     esconderImagem('Mensagem<br>Descriptografada');
     isBotaoCopy();
