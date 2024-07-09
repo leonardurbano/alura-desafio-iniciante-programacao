@@ -8,7 +8,6 @@ function limpaValor(){
 function criptografaTexto(){
 
     let campoUm = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    
     let arrayFrase = campoUm.value.split(' ');
     let criptografada = '';
 
@@ -78,9 +77,5 @@ function copyTexto() {
         alert('Copia realizada com sucesso');
     });
 
-
-    // btn.addEventListener('onclick', function(e){
-    //     document.execCommand(textArea.value);
-    // });
-
 }
+
