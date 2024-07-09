@@ -58,6 +58,8 @@ body{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    box-sizing: content-box;
+    width: 94%;
     gap: 5%;
 }
 
