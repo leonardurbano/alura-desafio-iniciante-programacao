@@ -2,56 +2,66 @@
 
 *{
     margin: 0;
-    padding: 0;
+    border: 0;
 }
 
 body{
+    /*background-color: #000; */
     background-image: url(../asset/bgH4tz.gif);
-    width: 100%;
-    height: 100%;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
 }
 
 .cabecalho{
-    width: 10%;
-    padding: 2%;
-    position: absolute;
+    margin-top: 15px;
 }
 
 .apresentacao{
     display: flex;
-    align-items: center;
-    justify-content:center;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 70%;
+    height: 450px;
     gap: 3%;
-    width: 100%;
-    height: auto;
+}
 
+.apresentacao__caixaCodificadora{
+    margin-top: 1%;
+    padding: 1%;
+    box-sizing: content-box;
+    border: 3px dashed #0f5a05;
+    text-align: center;
+    max-width: 250px;
+}
+
+textarea{
+    width: 100%;
+    padding: 1%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: #90d890;
+    outline: none;
+    background: none;
+    font-size: 1.3rem;
 }
 
 .apresentacao__caixaCodificadora__caixaTexto{
-    margin-top: 20%;
-    width: 80%;
-    height: 100%;
-    padding: 5%;
-    background-color: transparent;
-    border-color: transparent;
-    font-family: "Inter", sans-serif;
-    font-size: 2rem;
-    font-weight: 200;
-    color: #FFFFFF;
-    outline: 0;
-    border: dashed #2b8004 10px;
+    height: 82%;
+}
+
+.apresentacao__caixaDecodificadora__caixaTexto{
+    height: 78%;
 }
 
 .apresentacao__caixaCodificadora__texto__info{
     display: flex;
     align-items: center;
-    gap: 1%;
-    padding-top: 2%;
-    font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 200;
-    color: #FFFFFF;
-    padding-bottom: 3%;
+    font-size: 0.68rem;
+    margin-bottom: 3%;
+}
+
+.apresentacao__caixaCodificadora__texto__info img{
+    padding-right: 2%;
 }
 
 .apresentacao__caixaCodificadora__botoes{
@@ -59,146 +69,105 @@ body{
     align-items: baseline;
     justify-content: space-between;
     box-sizing: content-box;
-    width: 94%;
-    gap: 5%;
+    margin-bottom: 3%;
 }
 
-.apresentacao__caixaCodificadora__botoes_style{
-    padding: 4%;
-    text-align: center;
-    width: 50%;
-    font-family: "Inter", sans-serif;
+.botoes__style{
     color: #FFFFFF;
     background-color: #0f5a05;
-    font-size: 1rem;
-    border-radius: 0px;
-    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 2px;
+    padding: 3%;
+    width: 48%;
 }
 
-
-.apresentacao__caixaCodificadora__botoes_style:hover{
-    background-color: #51703c;
+.botoes__style:hover{
+    background-color: #338528;
 }
-
-/*---------------------------------------------------------*/
-
 
 .apresentacao__caixaDecodificadora{
-    display: flex;
-    flex-direction: column;
-    width: 15%;
-    border: dashed #2b8004 10px;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 5% 1% 5% 1%;
-}
-
-.apresentacao__caixaDecodificadora__img{
+    margin-top: 1%;
+    padding: 1%;
     box-sizing: content-box;
-    width: 100%;
-
-}
-
-.apresentacao__caixaDecodificadora__texto__label{
-    font-family: "Inter", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding-top: 10%;
-}
-
-.apresentacao__caixaDecodificadora__caixaTexto{
-    padding-top: 15%;
-    background-color: transparent;
-    border-color: transparent;
-    outline: 0;
-    overflow: hidden;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #FFFFFF;
+    border: 3px dashed #0f5a05;
     text-align: center;
+    max-width: 250px;
 }
 
 .apresentacao__caixaDecodificadora__botao__copy{
     width: 100%;
-    margin-top: 80%;
-    margin-bottom: -30%;
+    margin-bottom: 3%;
     
 }
 
-.rodape{
-    margin-top: 1.5%;
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 1.5%;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    color: #FFFFFF;    
+.apresentacao__caixaDecodificadora img{
+    width: 200px;
+    margin-bottom: 1%;
 }
 
-/*---------------------------------------------*/
+.rodape{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: center;
+    background: ;
+    color: #FFF;
+    font-size: 0.8rem;
+}
 
-@media screen and (max-width: 1044px){
 
-    .cabecalho{
+@media screen and (max-width: 550px){
+
+    body{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        box-sizing: content-box;
-        width: 100%;
+        gap: 5px;
     }
 
-    .cabecalho__logo{
+    .cabecalho{
+        margin-top: 15px;
+        margin-bottom: 15px;
         text-align: center;
     }
 
-    .apresentacao{
-        margin: 15px;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .apresentacao__caixaCodificadora__caixaTexto{
-        height: auto;
-        margin-top: 130px;
-    }
-
-    .apresentacao__caixaCodificadora__botoes{
-        display: flex;
-        justify-content: center;
-    }
-
-    .apresentacao__caixaCodificadora__botoes_style{
-        margin-bottom: 40px;
-        width: 35%;
-    }
-
-    .apresentacao__caixaDecodificadora{
-        display: flex;
-        flex-direction: column;
-        width: 400px;
-        height: auto;
-        margin: 0px;
-        padding: 0%;
-    }
-
-    .apresentacao__caixaDecodificadora__img{
-        width: 0px;
-    }
-
-    .apresentacao__caixaDecodificadora__caixaTexto{
-        height: auto;
-        margin-top: 15px;
+    .apresentacao__caixaCodificadora{
         margin-bottom: 15px;
     }
 
-    .apresentacao__caixaDecodificadora__botao__copy{
-        margin: 0%;
-        
+    .apresentacao__caixaDecodificadora{
+        margin-bottom: 15px;
+    }
+    
+    .apresentacao__caixaCodificadora__caixaTexto{
+        height: 150px;
+    }
+    
+    .apresentacao__caixaDecodificadora__caixaTexto{
+        height: 100px;
+    }
+    
+    .apresentacao__caixaCodificadora__texto__info{
+        align-items: center;
+        font-size: 0.68rem;
+    }
+    
+    .apresentacao__caixaCodificadora__texto__info img{
+        padding-right: 5%;
+    }
+    
+    .apresentacao__caixaDecodificadora img{
+        width: 100px;
+        margin-top: 3%;
+        margin-bottom: 1%;
+    }
+
+    .rodape{
+        display: unset;
+        margin-top: 60px;
+        font-size: 12px;
+        text-align: center;
     }
 }

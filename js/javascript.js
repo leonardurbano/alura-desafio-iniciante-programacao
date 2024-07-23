@@ -1,47 +1,49 @@
-function limpaValor(){
 
-    let campo = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    campo.value = '';
-
-}
+resetPage();
 
 function criptografaTexto(){
 
-    let campoUm = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    let arrayFrase = campoUm.value.split(' ');
-    let criptografada = '';
-
-    for (let index = 0; index < arrayFrase.length; index++) {
-        criptografada += arrayFrase[index].replace('e', 'enter').replace('i','imes').replace('a','ai').replace('o', 'ober').replace('u', 'ufat') + ' ';
-    }
-    //teste no console
-    console.log(criptografada.trim());
-
-    let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
-    frase.value = criptografada.trim();
-
-    esconderImagem('Mensagem<br>Criptografada');
-    isBotaoCopy();
     
+    let campoUm = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
+    
+    if(campoUm.value != ''){
+        let arrayFrase = campoUm.value.split(' ');
+        let criptografada = '';
+    
+        for (let index = 0; index < arrayFrase.length; index++) {
+            criptografada += arrayFrase[index].replace('e', 'enter').replace('i','imes').replace('a','ai').replace('o', 'ober').replace('u', 'ufat') + ' ';
+        }
+        //teste no console
+        console.log(criptografada.trim());
+    
+        let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
+        frase.value = criptografada.trim();
+    
+        esconderImagem('Mensagem<br>Criptografada');
+        isBotaoCopy();
+    }
 }
 
 function descriptografaTexto(){
 
     let campoDois = document.getElementsByClassName("apresentacao__caixaCodificadora__caixaTexto")[0];
-    let arrayFrase = campoDois.value.split(' ');
-    let descriptografada = '';
 
-    for (let index = 0; index < arrayFrase.length; index++) {
-        descriptografada += arrayFrase[index].replace('enter', 'e').replace('imes', 'i').replace('ai', 'a').replace('ober', 'o').replace('ufat', 'u') + ' ';
+    if(campoDois.value != ''){
+        let arrayFrase = campoDois.value.split(' ');
+        let descriptografada = '';
+    
+        for (let index = 0; index < arrayFrase.length; index++) {
+            descriptografada += arrayFrase[index].replace('enter', 'e').replace('imes', 'i').replace('ai', 'a').replace('ober', 'o').replace('ufat', 'u') + ' ';
+        }
+        //teste no console
+        console.log(descriptografada.trim());
+    
+        let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
+        frase.value = descriptografada.trim();
+    
+        esconderImagem('Mensagem<br>Descriptografada');
+        isBotaoCopy();
     }
-    //teste no console
-    console.log(descriptografada.trim());
-
-    let frase = document.getElementsByClassName("apresentacao__caixaDecodificadora__caixaTexto")[0];
-    frase.value = descriptografada.trim();
-
-    esconderImagem('Mensagem<br>Descriptografada');
-    isBotaoCopy();
 }
 
 
@@ -56,7 +58,7 @@ function esconderImagem(mensagem){
     let label = document.getElementsByClassName('apresentacao__caixaDecodificadora__texto__label')[0];
     label.innerHTML = mensagem;
 
-    limpaValor();
+    limpaValor("apresentacao__caixaCodificadora__caixaTexto");
     
 }
 
@@ -74,8 +76,21 @@ function copyTexto() {
     textArea.select();
 
     navigator.clipboard.writeText(textArea.value).then(() => {
-        alert('Copia realizada com sucesso');
+        //alert('Copia realizada com sucesso');
+        esconderImagem('Mensagem<br>Copiada');
     });
 
+    limpaValor("apresentacao__caixaDecodificadora__caixaTexto");
+
+}
+
+function limpaValor(ClassName){
+    let campo = document.getElementsByClassName(ClassName)[0];
+    campo.value = '';
+}
+
+function resetPage(){
+    limpaValor("apresentacao__caixaCodificadora__caixaTexto");
+    limpaValor("apresentacao__caixaDecodificadora__caixaTexto");
 }
 

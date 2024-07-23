@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="./css/style.css" />
     <title>::.DECODIFICADOR DE TEXTO.::</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header class="cabecalho">
-        <section class="cabecalho__logo">
-            <img src="./asset/logo-a.png" alt="">
-        </section>
+      <img src="./asset/logo-a.png" alt="" />
     </header>
 
     <main class="apresentacao">
-    
-        <section class="apresentacao__caixaCodificadora">
-            <textarea onclick="limpaValor()" class="apresentacao__caixaCodificadora__caixaTexto" name="" rows="15" cols="">Digite seu texto</textarea>
-            <p class="apresentacao__caixaCodificadora__texto__info"><img src="./asset/icon-alert.png" alt=""> Apenas letras minúsculas e sem acento.</p>
-            <div class="apresentacao__caixaCodificadora__botoes">
-                <input onclick="criptografaTexto()" class="apresentacao__caixaCodificadora__botoes_style" type="button" value="Criptografar">
-                <input onclick="descriptografaTexto()" class="apresentacao__caixaCodificadora__botoes_style" type="button" value="Descriptografar">
-            </div>
-        </section>
+      <section class="apresentacao__caixaCodificadora">
+        <textarea onclick="limpaValor()" class="apresentacao__caixaCodificadora__caixaTexto" rows="5" placeholder="digite seu texto aqui"></textarea>
+        <p class="apresentacao__caixaCodificadora__texto__info">
+          <img src="./asset/icon-alert.png" alt="" />
+          Apenas letras minúsculas e sem acento
+        </p>
+        <div class="apresentacao__caixaCodificadora__botoes">
+          <input
+            onclick="criptografaTexto()"
+            class="botoes__style"
+            type="button"
+            value="Criptografar"
+          />
+          <input
+            onclick="descriptografaTexto()"
+            class="botoes__style"
+            type="button"
+            value="Descriptografar"
+          />
+        </div>
+      </section>
 
-        <section class="apresentacao__caixaDecodificadora">
-            <img class="apresentacao__caixaDecodificadora__img" src="./asset/computer-1294045-2.svg" alt="">
-            <p class="apresentacao__caixaDecodificadora__texto__label">Nenhuma mensagem encontrada</p>
-            <textarea class="apresentacao__caixaDecodificadora__caixaTexto" name="" rows="5"
-                cols="">Digite um texto que você deseja criptografar ou descriptografar</textarea>
-           
-            <input onclick="copyTexto()" id="copy__texto" class="apresentacao__caixaDecodificadora__botao__copy apresentacao__caixaCodificadora__botoes_style" hidden="hidden" type="button" value="Copiar">
-        </section>
+      <section class="apresentacao__caixaDecodificadora">
+        <img
+          class="apresentacao__caixaDecodificadora__img"
+          src="./asset/computer-1294045-2.svg"
+          alt=""
+        />
+        <p class="apresentacao__caixaDecodificadora__texto__label">
+          Nenhuma mensagem encontrada
+        </p>
+        <textarea
+          class="apresentacao__caixaDecodificadora__caixaTexto"
+          rows="5"
+          disabled
+          placeholder="texto aparecerá aqui"
+        ></textarea>
+
+        <input
+          onclick="copyTexto()"
+          id="copy__texto"
+          class="apresentacao__caixaDecodificadora__botao__copy botoes__style"
+          hidden="hidden"
+          type="button"
+          value="Copiar"
+        />
+      </section>
     </main>
-
-    <footer class="rodape">2024 - Desenvolvido por leonardurbano - Treinamento Alura Latam</footer>
     
-    <script src="js/javascript.js"></script>
-</body>
+    <footer class="rodape">
+      2024 - Desenvolvido por leonardurbano - Treinamento Alura
+    </footer>
 
+    <script src="js/javascript.js"></script>
+  </body>
 </html>
